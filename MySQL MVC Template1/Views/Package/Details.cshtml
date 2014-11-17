@@ -1,0 +1,45 @@
+﻿@model MySQL_MVC_Template1.Models.packagemaster
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>packagemaster</legend>
+
+    <div class="display-label">packageid</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.packageid)
+    </div>
+
+    <div class="display-label">packagename</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.packagename)
+    </div>
+
+    <div class="display-label">packagedescription</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.packagedescription)
+    </div>
+
+    <div class="display-label">deleted</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.deleted)
+    </div>
+
+    <div class="display-label">createddate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.createddate)
+    </div>
+
+    <div class="display-label">modifieddate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.modifieddate)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

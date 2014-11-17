@@ -1,0 +1,20 @@
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\MySQL MVC Template1.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\MySQL MVC Template1.pdb
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\EntityFramework.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\EntityFramework.SqlServer.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\GridMvc.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\Microsoft.Web.Infrastructure.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\MySql.Data.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\MySql.Data.Entity.EF6.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\MySql.Web.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\System.Web.Helpers.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\System.Web.Mvc.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\System.Web.Razor.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\System.Web.WebPages.Deployment.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\System.Web.WebPages.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\System.Web.WebPages.Razor.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\EntityFramework.xml
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\bin\EntityFramework.SqlServer.xml
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\obj\Debug\MySQL MVC Template1.dll
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\obj\Debug\MySQL MVC Template1.pdb
+D:\Repositary\Swizcom\Tryouts-learning\MySQL MVC Template1\MySQL MVC Template1\obj\Debug\MySQL MVC Template1.csprojResolveAssemblyReference.cache

@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mydb_prodModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="mydb_prodEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="categorymasters" EntityType="mydb_prodModel.categorymaster" />
+    <EntitySet Name="ebillorderdetails" EntityType="mydb_prodModel.ebillorderdetail" />
+    <EntitySet Name="ebillordermasters" EntityType="mydb_prodModel.ebillordermaster" />
+    <EntitySet Name="elaborderdetails" EntityType="mydb_prodModel.elaborderdetail" />
+    <EntitySet Name="elabordermasters" EntityType="mydb_prodModel.elabordermaster" />
+    <EntitySet Name="employeemasters" EntityType="mydb_prodModel.employeemaster" />
+    <EntitySet Name="labmasters" EntityType="mydb_prodModel.labmaster" />
+    <EntitySet Name="my_aspnet_applications" EntityType="mydb_prodModel.my_aspnet_applications" />
+    <EntitySet Name="my_aspnet_membership" EntityType="mydb_prodModel.my_aspnet_membership" />
+    <EntitySet Name="my_aspnet_paths" EntityType="mydb_prodModel.my_aspnet_paths" />
+    <EntitySet Name="my_aspnet_personalizationallusers" EntityType="mydb_prodModel.my_aspnet_personalizationallusers" />
+    <EntitySet Name="my_aspnet_personalizationperuser" EntityType="mydb_prodModel.my_aspnet_personalizationperuser" />
+    <EntitySet Name="my_aspnet_profiles" EntityType="mydb_prodModel.my_aspnet_profiles" />
+    <EntitySet Name="my_aspnet_roles" EntityType="mydb_prodModel.my_aspnet_roles" />
+    <EntitySet Name="my_aspnet_sessioncleanup" EntityType="mydb_prodModel.my_aspnet_sessioncleanup" />
+    <EntitySet Name="my_aspnet_sessions" EntityType="mydb_prodModel.my_aspnet_sessions" />
+    <EntitySet Name="my_aspnet_sitemap" EntityType="mydb_prodModel.my_aspnet_sitemap" />
+    <EntitySet Name="my_aspnet_users" EntityType="mydb_prodModel.my_aspnet_users" />
+    <EntitySet Name="my_aspnet_usersinroles" EntityType="mydb_prodModel.my_aspnet_usersinroles" />
+    <EntitySet Name="packagemasters" EntityType="mydb_prodModel.packagemaster" />
+    <EntitySet Name="patientlookups" EntityType="mydb_prodModel.patientlookup" />
+    <EntitySet Name="patientmasters" EntityType="mydb_prodModel.patientmaster" />
+    <EntitySet Name="profilemasters" EntityType="mydb_prodModel.profilemaster" />
+    <EntitySet Name="refdoctors" EntityType="mydb_prodModel.refdoctor" />
+    <AssociationSet Name="fk_labmaster_categorymaster1" Association="mydb_prodModel.fk_labmaster_categorymaster1">
+      <End Role="categorymaster" EntitySet="categorymasters" />
+      <End Role="labmaster" EntitySet="labmasters" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ebillorderdetail_ebillordermaster1" Association="mydb_prodModel.fk_ebillorderdetail_ebillordermaster1">
+      <End Role="ebillordermaster" EntitySet="ebillordermasters" />
+      <End Role="ebillorderdetail" EntitySet="ebillorderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="fk_ebillordermaster_elabordermaster1" Association="mydb_prodModel.fk_ebillordermaster_elabordermaster1">
+      <End Role="elabordermaster" EntitySet="elabordermasters" />
+      <End Role="ebillordermaster" EntitySet="ebillordermasters" />
+    </AssociationSet>
+    <AssociationSet Name="fk_employeemaster_ebillordermaster1" Association="mydb_prodModel.fk_employeemaster_ebillordermaster1">
+      <End Role="ebillordermaster" EntitySet="ebillordermasters" />
+      <End Role="employeemaster" EntitySet="employeemasters" />
+    </AssociationSet>
+    <AssociationSet Name="fk_patientmaster_ebillordermaster1" Association="mydb_prodModel.fk_patientmaster_ebillordermaster1">
+      <End Role="ebillordermaster" EntitySet="ebillordermasters" />
+      <End Role="patientmaster" EntitySet="patientmasters" />
+    </AssociationSet>
+    <AssociationSet Name="fk_elaborderdetail_elabordermaster1" Association="mydb_prodModel.fk_elaborderdetail_elabordermaster1">
+      <End Role="elabordermaster" EntitySet="elabordermasters" />
+      <End Role="elaborderdetail" EntitySet="elaborderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="fk_elaborderdetail_labmaster1" Association="mydb_prodModel.fk_elaborderdetail_labmaster1">
+      <End Role="labmaster" EntitySet="labmasters" />
+      <End Role="elaborderdetail" EntitySet="elaborderdetails" />
+    </AssociationSet>
+    <AssociationSet Name="fk_employeemaster_elabordermaster1" Association="mydb_prodModel.fk_employeemaster_elabordermaster1">
+      <End Role="elabordermaster" EntitySet="elabordermasters" />
+      <End Role="employeemaster" EntitySet="employeemasters" />
+    </AssociationSet>
+    <AssociationSet Name="fk_patientmaster_elabordermaster1" Association="mydb_prodModel.fk_patientmaster_elabordermaster1">
+      <End Role="elabordermaster" EntitySet="elabordermasters" />
+      <End Role="patientmaster" EntitySet="patientmasters" />
+    </AssociationSet>
+    <AssociationSet Name="fk_refdoctor_elabordermaster1" Association="mydb_prodModel.fk_refdoctor_elabordermaster1">
+      <End Role="elabordermaster" EntitySet="elabordermasters" />
+      <End Role="refdoctor" EntitySet="refdoctors" />
+    </AssociationSet>
+    <AssociationSet Name="fk_labmaster_packagemaster1" Association="mydb_prodModel.fk_labmaster_packagemaster1">
+      <End Role="packagemaster" EntitySet="packagemasters" />
+      <End Role="labmaster" EntitySet="labmasters" />
+    </AssociationSet>
+    <AssociationSet Name="fk_labmaster_profilemaster1" Association="mydb_prodModel.fk_labmaster_profilemaster1">
+      <End Role="profilemaster" EntitySet="profilemasters" />
+      <End Role="labmaster" EntitySet="labmasters" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="categorymaster">
+    <Key>
+      <PropertyRef Name="categoryid" />
+    </Key>
+    <Property Name="categoryid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categoryname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="categorydescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="modifieddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="deleted" Type="Int32" />
+    <NavigationProperty Name="labmasters" Relationship="mydb_prodModel.fk_labmaster_categorymaster1" FromRole="categorymaster" ToRole="labmaster" />
+  </EntityType>
+  <EntityType Name="ebillorderdetail">
+    <Key>
+      <PropertyRef Name="ebillid" />
+    </Key>
+    <Property Name="ebillid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="labid" Type="Int32" Nullable="false" />
+    <Property Name="amount" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+    <Property Name="quantity" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+    <NavigationProperty Name="ebillordermaster" Relationship="mydb_prodModel.fk_ebillorderdetail_ebillordermaster1" FromRole="ebillorderdetail" ToRole="ebillordermaster" />
+  </EntityType>
+  <EntityType Name="ebillordermaster">
+    <Key>
+      <PropertyRef Name="ebillid" />
+    </Key>
+    <Property Name="ebillid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="eappointmentid" Type="Int32" Nullable="false" />
+    <Property Name="patientid" Type="Int32" Nullable="false" />
+    <Property Name="empid" Type="Int32" Nullable="false" />
+    <Property Name="source" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="refdocid" Type="Int32" />
+    <Property Name="billdate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="createddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="modifieddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="billamount" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+    <Property Name="rounded" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+    <Property Name="discount" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+    <Property Name="discamnt" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+    <Property Name="totalamnt" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+    <Property Name="settleamnt" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+    <Property Name="amntrendered" Type="Decimal" Nullable="false" Precision="3" Scale="0" />
+    <NavigationProperty Name="ebillorderdetail" Relationship="mydb_prodModel.fk_ebillorderdetail_ebillordermaster1" FromRole="ebillordermaster" ToRole="ebillorderdetail" />
+    <NavigationProperty Name="elabordermaster" Relationship="mydb_prodModel.fk_ebillordermaster_elabordermaster1" FromRole="ebillordermaster" ToRole="elabordermaster" />
+    <NavigationProperty Name="employeemasters" Relationship="mydb_prodModel.fk_employeemaster_ebillordermaster1" FromRole="ebillordermaster" ToRole="employeemaster" />
+    <NavigationProperty Name="patientmasters" Relationship="mydb_prodModel.fk_patientmaster_ebillordermaster1" FromRole="ebillordermaster" ToRole="patientmaster" />
+  </EntityType>
+  <EntityType Name="elaborderdetail">
+    <Key>
+      <PropertyRef Name="eappointmentid" />
+    </Key>
+    <Property Name="eappointmentid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="labid" Type="Int32" Nullable="false" />
+    <Property Name="labname" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="labdescription" Type="String" Nullable="false" MaxLength="800" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="elabordermaster" Relationship="mydb_prodModel.fk_elaborderdetail_elabordermaster1" FromRole="elaborderdetail" ToRole="elabordermaster" />
+    <NavigationProperty Name="labmaster" Relationship="mydb_prodModel.fk_elaborderdetail_labmaster1" FromRole="elaborderdetail" ToRole="labmaster" />
+  </EntityType>
+  <EntityType Name="elabordermaster">
+    <Key>
+      <PropertyRef Name="eappointmentid" />
+    </Key>
+    <Property Name="eappointmentid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="patientid" Type="Int32" Nullable="false" />
+    <Property Name="empid" Type="Int32" Nullable="false" />
+    <Property Name="appointmentdate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="createddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="modifieddate" Type="DateTime" Precision="0" />
+    <Property Name="deleted" Type="Int32" Nullable="false" />
+    <Property Name="refdocid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ebillordermasters" Relationship="mydb_prodModel.fk_ebillordermaster_elabordermaster1" FromRole="elabordermaster" ToRole="ebillordermaster" />
+    <NavigationProperty Name="elaborderdetail" Relationship="mydb_prodModel.fk_elaborderdetail_elabordermaster1" FromRole="elabordermaster" ToRole="elaborderdetail" />
+    <NavigationProperty Name="employeemasters" Relationship="mydb_prodModel.fk_employeemaster_elabordermaster1" FromRole="elabordermaster" ToRole="employeemaster" />
+    <NavigationProperty Name="patientmasters" Relationship="mydb_prodModel.fk_patientmaster_elabordermaster1" FromRole="elabordermaster" ToRole="patientmaster" />
+    <NavigationProperty Name="refdoctors" Relationship="mydb_prodModel.fk_refdoctor_elabordermaster1" FromRole="elabordermaster" ToRole="refdoctor" />
+  </EntityType>
+  <EntityType Name="employeemaster">
+    <Key>
+      <PropertyRef Name="empid" />
+      <PropertyRef Name="elabordermaster_eappointmentid" />
+      <PropertyRef Name="ebillordermaster_ebillid" />
+    </Key>
+    <Property Name="empid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="empfirstname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="emplastname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="empdateofbirth" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="empdesignation" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="modifieddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="deleted" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="menurights" Type="Int32" Nullable="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="resetpassword" Type="Int32" Nullable="false" />
+    <Property Name="elabordermaster_eappointmentid" Type="Int32" Nullable="false" />
+    <Property Name="ebillordermaster_ebillid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ebillordermaster" Relationship="mydb_prodModel.fk_employeemaster_ebillordermaster1" FromRole="employeemaster" ToRole="ebillordermaster" />
+    <NavigationProperty Name="elabordermaster" Relationship="mydb_prodModel.fk_employeemaster_elabordermaster1" FromRole="employeemaster" ToRole="elabordermaster" />
+  </EntityType>
+  <EntityType Name="labmaster">
+    <Key>
+      <PropertyRef Name="labid" />
+    </Key>
+    <Property Name="labid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="labname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="labdescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="deleted" Type="Int32" />
+    <Property Name="profileid" Type="Int32" Nullable="false" />
+    <Property Name="categoryid" Type="Int32" Nullable="false" />
+    <Property Name="packageid" Type="Int32" />
+    <Property Name="createddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="modifieddate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="categorymaster" Relationship="mydb_prodModel.fk_labmaster_categorymaster1" FromRole="labmaster" ToRole="categorymaster" />
+    <NavigationProperty Name="elaborderdetails" Relationship="mydb_prodModel.fk_elaborderdetail_labmaster1" FromRole="labmaster" ToRole="elaborderdetail" />
+    <NavigationProperty Name="packagemaster" Relationship="mydb_prodModel.fk_labmaster_packagemaster1" FromRole="labmaster" ToRole="packagemaster" />
+    <NavigationProperty Name="profilemaster" Relationship="mydb_prodModel.fk_labmaster_profilemaster1" FromRole="labmaster" ToRole="profilemaster" />
+  </EntityType>
+  <EntityType Name="my_aspnet_applications">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+    <Property Name="description" Type="String" MaxLength="256" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_membership">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="Comment" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="128" Unicode="false" FixedLength="false" />
+    <Property Name="PasswordKey" Type="String" MaxLength="32" Unicode="false" FixedLength="true" />
+    <Property Name="PasswordFormat" Type="SByte" />
+    <Property Name="PasswordQuestion" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="PasswordAnswer" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+    <Property Name="IsApproved" Type="Boolean" />
+    <Property Name="LastActivityDate" Type="DateTime" Precision="0" />
+    <Property Name="LastLoginDate" Type="DateTime" Precision="0" />
+    <Property Name="LastPasswordChangedDate" Type="DateTime" Precision="0" />
+    <Property Name="CreationDate" Type="DateTime" Precision="0" />
+    <Property Name="IsLockedOut" Type="Boolean" />
+    <Property Name="LastLockedOutDate" Type="DateTime" Precision="0" />
+    <Property Name="FailedPasswordAttemptCount" Type="Int64" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Precision="0" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="Int64" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="my_aspnet_paths">
+    <Key>
+      <PropertyRef Name="pathId" />
+    </Key>
+    <Property Name="applicationId" Type="Int32" Nullable="false" />
+    <Property Name="pathId" Type="String" Nullable="false" MaxLength="36" Unicode="false" FixedLength="false" />
+    <Property Name="path" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+    <Property Name="loweredPath" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_personalizationallusers">
+    <Key>
+      <PropertyRef Name="pathId" />
+    </Key>
+    <Property Name="pathId" Type="String" Nullable="false" MaxLength="36" Unicode="false" FixedLength="false" />
+    <Property Name="pageSettings" Type="Binary" Nullable="false" MaxLength="65535" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="my_aspnet_personalizationperuser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="applicationId" Type="Int32" Nullable="false" />
+    <Property Name="pathId" Type="String" MaxLength="36" Unicode="false" FixedLength="false" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="pageSettings" Type="Binary" Nullable="false" MaxLength="65535" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Nullable="false" Precision="0" />
+  </EntityType>
+  <EntityType Name="my_aspnet_profiles">
+    <Key>
+      <PropertyRef Name="userId" />
+    </Key>
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="valueindex" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="stringdata" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="binarydata" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="lastUpdatedDate" Type="DateTime" Nullable="false" annotation:StoreGeneratedPattern="Identity" Precision="0" />
+  </EntityType>
+  <EntityType Name="my_aspnet_roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="applicationId" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_sessioncleanup">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="LastRun" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="IntervalMinutes" Type="Int32" Nullable="false" />
+    <Property Name="ApplicationId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_sessions">
+    <Key>
+      <PropertyRef Name="SessionId" />
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="SessionId" Type="String" Nullable="false" MaxLength="191" Unicode="false" FixedLength="false" />
+    <Property Name="ApplicationId" Type="Int32" Nullable="false" />
+    <Property Name="Created" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Expires" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LockDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="LockId" Type="Int32" Nullable="false" />
+    <Property Name="Timeout" Type="Int32" Nullable="false" />
+    <Property Name="Locked" Type="Boolean" Nullable="false" />
+    <Property Name="SessionItems" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Flags" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="my_aspnet_sitemap">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="512" Unicode="false" FixedLength="false" />
+    <Property Name="Url" Type="String" MaxLength="512" Unicode="false" FixedLength="false" />
+    <Property Name="Roles" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="ParentId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="my_aspnet_users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="applicationId" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="256" Unicode="false" FixedLength="false" />
+    <Property Name="isAnonymous" Type="Boolean" Nullable="false" />
+    <Property Name="lastActivityDate" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="my_aspnet_usersinroles">
+    <Key>
+      <PropertyRef Name="userId" />
+      <PropertyRef Name="roleId" />
+    </Key>
+    <Property Name="userId" Type="Int32" Nullable="false" />
+    <Property Name="roleId" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="packagemaster">
+    <Key>
+      <PropertyRef Name="packageid" />
+    </Key>
+    <Property Name="packageid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="packagename" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="packagedescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="deleted" Type="Int32" />
+    <Property Name="createddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="modifieddate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="labmasters" Relationship="mydb_prodModel.fk_labmaster_packagemaster1" FromRole="packagemaster" ToRole="labmaster" />
+  </EntityType>
+  <EntityType Name="patientlookup">
+    <Key>
+      <PropertyRef Name="patientid" />
+    </Key>
+    <Property Name="patientid" Type="Int32" Nullable="false" />
+    <Property Name="firstname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="lastname" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="dateofbirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="deleted" Type="Int32" />
+  </EntityType>
+  <EntityType Name="patientmaster">
+    <Key>
+      <PropertyRef Name="patientid" />
+      <PropertyRef Name="elabordermaster_eappointmentid" />
+      <PropertyRef Name="ebillordermaster_ebillid" />
+    </Key>
+    <Property Name="patientid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="lastname" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="dateofbirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="street" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="city" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="region" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="country" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="zip" Type="Int32" />
+    <Property Name="mobile" Type="Int64" />
+    <Property Name="emailid" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="deleted" Type="Int32" Nullable="false" />
+    <Property Name="createddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="modifieddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="elabordermaster_eappointmentid" Type="Int32" Nullable="false" />
+    <Property Name="ebillordermaster_ebillid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ebillordermaster" Relationship="mydb_prodModel.fk_patientmaster_ebillordermaster1" FromRole="patientmaster" ToRole="ebillordermaster" />
+    <NavigationProperty Name="elabordermaster" Relationship="mydb_prodModel.fk_patientmaster_elabordermaster1" FromRole="patientmaster" ToRole="elabordermaster" />
+  </EntityType>
+  <EntityType Name="profilemaster">
+    <Key>
+      <PropertyRef Name="profileid" />
+    </Key>
+    <Property Name="profileid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="profilename" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="profiledescription" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="createddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="modifieddate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="deleted" Type="Int32" />
+    <NavigationProperty Name="labmasters" Relationship="mydb_prodModel.fk_labmaster_profilemaster1" FromRole="profilemaster" ToRole="labmaster" />
+  </EntityType>
+  <EntityType Name="refdoctor">
+    <Key>
+      <PropertyRef Name="refdocid" />
+      <PropertyRef Name="elabordermaster_eappointmentid" />
+    </Key>
+    <Property Name="refdocid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="doctorname" Type="String" Nullable="false" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="specialization" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="refdoctorcol" Type="String" MaxLength="45" Unicode="false" FixedLength="false" />
+    <Property Name="elabordermaster_eappointmentid" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="elabordermaster" Relationship="mydb_prodModel.fk_refdoctor_elabordermaster1" FromRole="refdoctor" ToRole="elabordermaster" />
+  </EntityType>
+  <Association Name="fk_labmaster_categorymaster1">
+    <End Role="categorymaster" Type="mydb_prodModel.categorymaster" Multiplicity="1" />
+    <End Role="labmaster" Type="mydb_prodModel.labmaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="categorymaster">
+        <PropertyRef Name="categoryid" />
+      </Principal>
+      <Dependent Role="labmaster">
+        <PropertyRef Name="categoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ebillorderdetail_ebillordermaster1">
+    <End Role="ebillordermaster" Type="mydb_prodModel.ebillordermaster" Multiplicity="1" />
+    <End Role="ebillorderdetail" Type="mydb_prodModel.ebillorderdetail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ebillordermaster">
+        <PropertyRef Name="ebillid" />
+      </Principal>
+      <Dependent Role="ebillorderdetail">
+        <PropertyRef Name="ebillid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_ebillordermaster_elabordermaster1">
+    <End Role="elabordermaster" Type="mydb_prodModel.elabordermaster" Multiplicity="1" />
+    <End Role="ebillordermaster" Type="mydb_prodModel.ebillordermaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="elabordermaster">
+        <PropertyRef Name="eappointmentid" />
+      </Principal>
+      <Dependent Role="ebillordermaster">
+        <PropertyRef Name="eappointmentid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_employeemaster_ebillordermaster1">
+    <End Role="ebillordermaster" Type="mydb_prodModel.ebillordermaster" Multiplicity="1" />
+    <End Role="employeemaster" Type="mydb_prodModel.employeemaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ebillordermaster">
+        <PropertyRef Name="ebillid" />
+      </Principal>
+      <Dependent Role="employeemaster">
+        <PropertyRef Name="ebillordermaster_ebillid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_patientmaster_ebillordermaster1">
+    <End Role="ebillordermaster" Type="mydb_prodModel.ebillordermaster" Multiplicity="1" />
+    <End Role="patientmaster" Type="mydb_prodModel.patientmaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ebillordermaster">
+        <PropertyRef Name="ebillid" />
+      </Principal>
+      <Dependent Role="patientmaster">
+        <PropertyRef Name="ebillordermaster_ebillid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_elaborderdetail_elabordermaster1">
+    <End Role="elabordermaster" Type="mydb_prodModel.elabordermaster" Multiplicity="1" />
+    <End Role="elaborderdetail" Type="mydb_prodModel.elaborderdetail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="elabordermaster">
+        <PropertyRef Name="eappointmentid" />
+      </Principal>
+      <Dependent Role="elaborderdetail">
+        <PropertyRef Name="eappointmentid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_elaborderdetail_labmaster1">
+    <End Role="labmaster" Type="mydb_prodModel.labmaster" Multiplicity="1" />
+    <End Role="elaborderdetail" Type="mydb_prodModel.elaborderdetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="labmaster">
+        <PropertyRef Name="labid" />
+      </Principal>
+      <Dependent Role="elaborderdetail">
+        <PropertyRef Name="labid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_employeemaster_elabordermaster1">
+    <End Role="elabordermaster" Type="mydb_prodModel.elabordermaster" Multiplicity="1" />
+    <End Role="employeemaster" Type="mydb_prodModel.employeemaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="elabordermaster">
+        <PropertyRef Name="eappointmentid" />
+      </Principal>
+      <Dependent Role="employeemaster">
+        <PropertyRef Name="elabordermaster_eappointmentid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_patientmaster_elabordermaster1">
+    <End Role="elabordermaster" Type="mydb_prodModel.elabordermaster" Multiplicity="1" />
+    <End Role="patientmaster" Type="mydb_prodModel.patientmaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="elabordermaster">
+        <PropertyRef Name="eappointmentid" />
+      </Principal>
+      <Dependent Role="patientmaster">
+        <PropertyRef Name="elabordermaster_eappointmentid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_refdoctor_elabordermaster1">
+    <End Role="elabordermaster" Type="mydb_prodModel.elabordermaster" Multiplicity="1" />
+    <End Role="refdoctor" Type="mydb_prodModel.refdoctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="elabordermaster">
+        <PropertyRef Name="eappointmentid" />
+      </Principal>
+      <Dependent Role="refdoctor">
+        <PropertyRef Name="elabordermaster_eappointmentid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_labmaster_packagemaster1">
+    <End Role="packagemaster" Type="mydb_prodModel.packagemaster" Multiplicity="0..1" />
+    <End Role="labmaster" Type="mydb_prodModel.labmaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="packagemaster">
+        <PropertyRef Name="packageid" />
+      </Principal>
+      <Dependent Role="labmaster">
+        <PropertyRef Name="packageid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="fk_labmaster_profilemaster1">
+    <End Role="profilemaster" Type="mydb_prodModel.profilemaster" Multiplicity="1" />
+    <End Role="labmaster" Type="mydb_prodModel.labmaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="profilemaster">
+        <PropertyRef Name="profileid" />
+      </Principal>
+      <Dependent Role="labmaster">
+        <PropertyRef Name="profileid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

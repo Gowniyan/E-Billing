@@ -1,0 +1,47 @@
+﻿@model MySQL_MVC_Template1.Models.profilemaster
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+
+    
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>profilemaster</legend>
+        @Html.HiddenFor(model => model.profileid)
+        @Html.HiddenFor(model => model.createddate)
+        @Html.HiddenFor(model => model.deleted)
+        @{Html.EnableClientValidation();
+}
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.profilename)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.profilename)
+            @Html.ValidationMessageFor(model => model.profilename)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.profiledescription)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.profiledescription)
+            @Html.ValidationMessageFor(model => model.profiledescription)
+        </div>
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

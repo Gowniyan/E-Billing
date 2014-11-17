@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a4e9813ea2814c18b9278869067a5d1d" Name="Diagram1">
+        <EntityTypeShape EntityType="mydb_finalModel.categorymaster" Width="1.5" PointX="3.75" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.ebillorderdetail" Width="1.5" PointX="5.25" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.ebillordermaster" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.elaborderdetail" Width="1.5" PointX="8.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.elabordermaster" Width="1.5" PointX="6" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.employeemaster" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.labmaster" Width="1.5" PointX="6" PointY="26.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.my_aspnet_applications" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.my_aspnet_membership" Width="1.5" PointX="8.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.my_aspnet_paths" Width="1.5" PointX="5.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.my_aspnet_personalizationallusers" Width="1.5" PointX="8.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.my_aspnet_personalizationperuser" Width="1.5" PointX="10.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.my_aspnet_profiles" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.my_aspnet_roles" Width="1.5" PointX="10.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.my_aspnet_sessioncleanup" Width="1.5" PointX="10.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.my_aspnet_sessions" Width="1.5" PointX="10.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.my_aspnet_sitemap" Width="1.5" PointX="12.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.my_aspnet_users" Width="1.5" PointX="12.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.my_aspnet_usersinroles" Width="1.5" PointX="12.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.packagemaster" Width="1.5" PointX="3.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.patientlookup" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.patientmaster" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.profilemaster" Width="1.5" PointX="3.75" PointY="29.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="mydb_finalModel.refdoctor" Width="1.5" PointX="3.75" PointY="20" IsExpanded="true" />
+        <AssociationConnector Association="mydb_finalModel.fk_labmaster_categorymaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="mydb_finalModel.fk_ebillorderdetail_ebillordermaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="mydb_finalModel.fk_ebillordermaster_elabordermaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="mydb_finalModel.fk_ebillordermaster_employeemaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="mydb_finalModel.fk_ebillordermaster_patientmaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="mydb_finalModel.fk_elaborderdetail_elabordermaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="mydb_finalModel.fk_elaborderdetail_labmaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="mydb_finalModel.fk_elabordermaster_employeemaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="mydb_finalModel.fk_elabordermaster_patientmaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="mydb_finalModel.fk_elabordermaster_refdoctor1" ManuallyRouted="false" />
+        <AssociationConnector Association="mydb_finalModel.fk_labmaster_packagemaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="mydb_finalModel.fk_labmaster_profilemaster1" ManuallyRouted="false" />
+        <AssociationConnector Association="mydb_finalModel.fk_patientlookup_patientmaster1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
