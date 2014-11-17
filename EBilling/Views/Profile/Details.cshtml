@@ -1,0 +1,45 @@
+﻿@model Ebilling.Models.profilemaster
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>profilemaster</legend>
+
+    <div class="display-label">profileid</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.profileid)
+    </div>
+
+    <div class="display-label">profilename</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.profilename)
+    </div>
+
+    <div class="display-label">profiledescription</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.profiledescription)
+    </div>
+
+    <div class="display-label">createddate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.createddate)
+    </div>
+
+    <div class="display-label">modifieddate</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.modifieddate)
+    </div>
+
+    <div class="display-label">deleted</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.deleted)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

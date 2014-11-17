@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Ebilling.Models.profilemaster>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        
+        <th>
+            profilename
+        </th>
+        <th>
+            profiledescription
+        </th>
+        
+        <th>Action</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink(item.profilename, "Edit", new { id = item.profileid })
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.profiledescription)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new { id = item.profileid })
+        </td>
+    </tr>
+}
+
+</table>

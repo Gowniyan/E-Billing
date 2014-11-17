@@ -1,0 +1,38 @@
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\MySQL MVC Template1.dll.config
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\MySQL MVC Template1.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\MySQL MVC Template1.pdb
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\EntityFramework.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\EntityFramework.SqlServer.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\GridMvc.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\Microsoft.Web.Infrastructure.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\MySql.Data.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\MySql.Data.Entity.EF6.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\MySql.Web.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\System.Web.Helpers.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\System.Web.Razor.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\System.Web.WebPages.Deployment.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\System.Web.WebPages.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\System.Web.WebPages.Razor.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\EntityFramework.xml
+G:\GitHub\E-Billing\MySQL MVC Template1\bin\EntityFramework.SqlServer.xml
+G:\GitHub\E-Billing\MySQL MVC Template1\obj\Debug\MySQL MVC Template1.dll
+G:\GitHub\E-Billing\MySQL MVC Template1\obj\Debug\MySQL MVC Template1.pdb
+G:\GitHub\E-Billing\EBilling\bin\MySQL MVC Template1.dll.config
+G:\GitHub\E-Billing\EBilling\bin\MySQL MVC Template1.dll
+G:\GitHub\E-Billing\EBilling\bin\MySQL MVC Template1.pdb
+G:\GitHub\E-Billing\EBilling\bin\EntityFramework.dll
+G:\GitHub\E-Billing\EBilling\bin\EntityFramework.SqlServer.dll
+G:\GitHub\E-Billing\EBilling\bin\GridMvc.dll
+G:\GitHub\E-Billing\EBilling\bin\Microsoft.Web.Infrastructure.dll
+G:\GitHub\E-Billing\EBilling\bin\MySql.Data.dll
+G:\GitHub\E-Billing\EBilling\bin\MySql.Data.Entity.EF6.dll
+G:\GitHub\E-Billing\EBilling\bin\MySql.Web.dll
+G:\GitHub\E-Billing\EBilling\bin\System.Web.Helpers.dll
+G:\GitHub\E-Billing\EBilling\bin\System.Web.Razor.dll
+G:\GitHub\E-Billing\EBilling\bin\System.Web.WebPages.Deployment.dll
+G:\GitHub\E-Billing\EBilling\bin\System.Web.WebPages.dll
+G:\GitHub\E-Billing\EBilling\bin\System.Web.WebPages.Razor.dll
+G:\GitHub\E-Billing\EBilling\bin\EntityFramework.xml
+G:\GitHub\E-Billing\EBilling\bin\EntityFramework.SqlServer.xml
+G:\GitHub\E-Billing\EBilling\obj\Debug\MySQL MVC Template1.dll
+G:\GitHub\E-Billing\EBilling\obj\Debug\MySQL MVC Template1.pdb
